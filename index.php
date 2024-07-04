@@ -41,7 +41,19 @@
         <nav class="nav-menu" role="navigation">
           <ul class="nav-links">
             <li><a href="index.html" title="Home">Home
-<?php echo get_template_directory_uri()?>
+<?php 
+$friends="0";
+if($friends<10){
+  echo '<br>you are my friends';
+}
+else{
+  echo '<br>you are not my friends';
+}
+
+
+
+
+?>
 
             </a></li>
             <li><a href="article.html" title="World">World</a>
@@ -148,54 +160,38 @@
       </section> <!-- End of class="world" -->
 
       <section class="politics">
-        <h2>Politics</h2>
-        <div class="story">
+<h2>Politics</h2>
+
+<?php 
+while(have_posts()): the_post();
+?>
+<div class="story">
           <a href="#">
             <div class="story-img">
               <img src="<?php echo get_template_directory_uri().'/assets/images/politics4.jpg';?>" alt="Protesters">
             </div>
             <div class="story-headline">
-              <h3>Fusce eu quam sit amet arcu cursus tristique</h3>
-              <p class="exact-time">13:53h</p>
+              <h3><?php the_title('i am hasan');?></h3>
+              <p class="exact-time"><?php the_time();?></p>
+              <p class="exact-time"><?php the_author();?></p>
+              <p class="exact-time"><?php the_category();?></p>
             </div>
           </a>
         </div>
 
-        <div class="story">
-          <a href="#">
-            <div class="story-img">
-              <img src="<?php echo get_template_directory_uri().'/assets/images/politics5.jpg';?>" alt="People with newspapers">
-            </div>
-            <div class="story-headline">
-              <h3>Phasellus porta sit amet velit eget convallis</h3>
-              <p class="exact-time">13:53h</p>
-            </div>
-          </a>
-        </div>
+<?php
+endwhile;
 
-        <div class="story">
-          <a href="#">
-            <div class="story-img">
-              <img src="<?php echo get_template_directory_uri().'/assets/images/politics9.jpg';?>" alt="Police Officer">
-            </div>
-            <div class="story-headline">
-              <h3>Cras quis auctor dui, id auctor lacus</h3>
-              <p class="exact-time">13:53h</p>
-            </div>
-          </a>
-        </div>
 
-        <div class="story">
-          <a href="#">
-            <div class="story-img">
-              <img src="<?php echo get_template_directory_uri().'/assets/images/world2.jpg';?>" alt="London">
-            </div>
-            <div class="story-headline">
-              <h3>Nulla commodo eros a est porttitor</h3>
-              <p class="exact-time">13:53h</p>
-            </div>
-          </a>
-        </div>
+
+
+?>
+
+
+
+        
+
+
       </section> <!-- End of class="politics" -->
 
       <section class="business">
