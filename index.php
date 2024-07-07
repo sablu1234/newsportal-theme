@@ -163,12 +163,37 @@ else{
 <h2>Politics</h2>
 
 <?php 
+// $name="hasan";
+// $cell= "0132054646";
+// $email="mdjljla@gmail.com";
+
+// $personeinfo=array("hasan","0132054646","mdjljla@gmail.com");
+
+// foreach ($personeinfo as $value){
+//   echo $value;
+// }
+
+
+
+if(have_posts()):
 while(have_posts()): the_post();
 ?>
 <div class="story">
           <a href="#">
+          <?php 
+          if(has_post_thumbnail()){
+            the_post_thumbnail();
+          }
+          else{
+            ?>
+           <img src="<?php echo get_template_directory_uri().'/assets/images/politics4.jpg';?>" alt="Protesters">
+            <?php
+          }
+          
+          
+          ?>
             <div class="story-img">
-              <img src="<?php echo get_template_directory_uri().'/assets/images/politics4.jpg';?>" alt="Protesters">
+             
             </div>
             <div class="story-headline">
               <h3><?php the_title('i am hasan');?></h3>
@@ -181,7 +206,9 @@ while(have_posts()): the_post();
 
 <?php
 endwhile;
-
+else:
+  echo "post nai";
+endif;
 
 
 
