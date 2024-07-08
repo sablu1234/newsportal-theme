@@ -173,6 +173,11 @@ else{
 //   echo $value;
 // }
 
+// $info=array('d',4464,"hadi jaman");
+// echo count($info);
+// echo $info[2];
+
+
 
 
 if(have_posts()):
