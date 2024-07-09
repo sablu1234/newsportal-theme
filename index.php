@@ -177,6 +177,24 @@ else{
 // echo count($info);
 // echo $info[2];
 
+// $studentinfo=array(
+//   'key'=>'value',
+//   'name' =>'hadi jaman',
+//   'childinfo'=>array(
+//     'c_name'=>'rowza',
+//   ),
+//   );
+// echo $studentinfo['childinfo']['c_name'];
+
+$slno=0;
+for($taka=0;$taka<100;$taka+=10){
+  echo $taka.'<br>';
+  $slno++;
+}
+echo $slno;
+
+
+
 
 
 
