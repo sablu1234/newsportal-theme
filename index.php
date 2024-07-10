@@ -186,13 +186,18 @@ else{
 //   );
 // echo $studentinfo['childinfo']['c_name'];
 
-$slno=0;
-for($taka=0;$taka<100;$taka+=10){
-  echo $taka.'<br>';
-  $slno++;
-}
-echo $slno;
+// $slno=0;
+// for($taka=0;$taka<100;$taka+=10){
+//   echo $taka.'<br>';
+//   $slno++;
+// }
+// echo $slno;
 
+$taka=0;
+while($taka<100){
+  echo $taka;
+  $taka+=10;
+}
 
 
 
